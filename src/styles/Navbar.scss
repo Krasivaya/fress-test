@@ -1,0 +1,11 @@
+.mobile {
+  min-height: 100vh !important;
+}
+.menu {
+  .item {
+    padding: 1.8em 2em !important;
+    &--red {
+      color: #f40101 !important;
+    }
+  }
+}

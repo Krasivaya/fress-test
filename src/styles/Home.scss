@@ -1,0 +1,216 @@
+.fress {
+  margin: 1.3em;
+  .user-info{
+    width: 50%!important;
+  .avatar{
+    width: 18.75%!important;
+  }
+  .details {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%!important;
+    .bio {
+      width: 70%;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+    p,
+    span {
+      color: rgba($color: #000, $alpha: 0.5);
+      font-style: italic;
+    }
+  }
+  .contact {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 31.25%!important;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      margin-bottom: 1em;
+      border-radius: 2em;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .user-info{
+    .details{
+      width: 80% !important;
+    }
+    .contact {
+      flex-direction: row !important;
+      justify-content: flex-start;
+      width: 100% !important;
+      margin-top: 2em !important;
+      .buttons{
+        flex-direction: row !important;
+      }
+
+    }
+  }
+}
+@media screen and (max-width: 520px) {
+  .user-info{
+    flex-direction: column !important;
+    .avatar, img, .details, .bio, .contact{
+      width: 100% !important;
+    }
+    .bio{
+      margin-top: 1.2em;
+    }
+    .info {
+      margin-top: 2em;
+    }
+  }
+  .message {
+    input {
+      border-radius: 1rem !important;
+      min-width: 20rem;
+    }
+  }
+}
+}
+.message {
+  input {
+    border-radius: 1rem !important;
+    min-width: 30em;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+  .storage {
+    .kitchen {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 32%;
+      }
+    }
+  }
+  .menu {
+    .food {
+      display: flex;
+      &__item {
+        position: relative;
+        img {
+          width: 95%;
+        }
+        button {
+          cursor: pointer;
+          background: transparent;
+          margin: 1em !important;
+          padding: 0 !important;
+          position: absolute;
+          right: 2em;
+          .icon {
+            z-index: 2;
+            position: absolute;
+          }
+        }
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          width: 95%;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.021),
+            rgba(0, 0, 0, 0.842)
+          );
+          color: #fff;
+          font-size: 1.2em;
+          opacity: 1;
+          padding: 1em 0.2em;
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        &__item {
+          width: 50%;
+          img {
+            margin-bottom: 2em;
+          }
+        }
+        .overlay {
+          margin-bottom: 1.6em;
+        }
+        .user-info.row{
+          flex-direction: column !important;
+          .avatar, .details, .contact{
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+.view-menu {
+  position: relative;
+  min-height: 30em;
+  button {
+    cursor: pointer;
+    background: transparent !important;
+    position: absolute;
+    right: 2em;
+    .heart.icon {
+      z-index: 2;
+      position: absolute;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.075),
+      rgba(0, 0, 0, 0.918)
+    );
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 1;
+    padding: 1em 0.2em;
+    height: 7em;
+  }
+  .details {
+    margin-left: 1.3em;
+    margin-bottom: 1em;
+    h2 {
+      margin: 0;
+    }
+      span{
+        margin-right: 1em;
+        font-size: 0.8em;
+        font-style: italic;
+        color: rgba($color: rgba(255, 255, 255, 0.726), $alpha: 0.5);
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: flex-end;
+    .contact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      img {
+        width: 15% !important;
+        margin-left: 1.3em;
+      }
+    }
+    button {
+      background: red !important;
+      cursor: pointer;
+    }
+  }
+}
